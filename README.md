@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Note For Recruiter
+
+In this project I can't upload or expose my .env file because there's my secret github access token.
+
 ## Available Scripts
 
 In the project directory, you can run:
