@@ -60,12 +60,20 @@ function App() {
           </Button>
         </Form>
 
-        {showSearch && <div className="py-4">Showing repositories for "{showSearch}"</div>}
+        {showSearch && (
+          <div data-testid="result-message" className="py-4">
+            Showing repositories for "{showSearch}"
+          </div>
+        )}
 
         <Accordion>
           {results.length > 0 &&
             results.map((result, index) => (
-              <Accordion.Item key={result.id} eventKey={`${index}`}>
+              <Accordion.Item
+                key={result.id}
+                eventKey={`${index}`}
+                data-testid={`accordion-item-${index}`}
+              >
                 <Accordion.Header>
                   <div className="text-truncate">{result.owner.login}</div>
                 </Accordion.Header>
